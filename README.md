@@ -58,30 +58,15 @@ Dataloader class is available under ```models/dataset_utils.py```, and contains 
 
 If you found this work useful for your research, please cite:
 
-Razdaibiedina A, Brechalov A. Learning multi-scale functional representations of proteins from single-cell microscopy data. InICLR2022 Machine Learning for Drug Discovery 2022 Mar 31.
+Razdaibiedina, A., Brechalov, A.V., Friesen, H., Mattiazzi Usaj, M., Masinas, M.P.D., Garadi Suresh, H., Wang, K., Boone, C., Ba, J. and Andrews, B.J., 2023. PIFiA: Self-supervised Approach for Protein Functional Annotation from Single-Cell Imaging Data. 
 
 ```
-@article{razdaibiedina2022learning,
-  title={Learning multi-scale functional representations of proteins from single-cell microscopy data},
-  author={Razdaibiedina, Anastasia and Brechalov, Alexander},
-  journal={arXiv preprint arXiv:2205.11676},
-  year={2022}
+@article{razdaibiedina2023pifia,
+  title={PIFiA: Self-supervised Approach for Protein Functional Annotation from Single-Cell Imaging Data},
+  author={Razdaibiedina, Anastasia and Brechalov, Alexander V and Friesen, Helena and Mattiazzi Usaj, Mojca and Masinas, Myra Paz David and Garadi Suresh, Harsha and Wang, Kyle and Boone, Charlie and Ba, Jimmy and Andrews, Brenda J},
+  journal={bioRxiv},
+  pages={2023--02},
+  year={2023},
+  publisher={Cold Spring Harbor Laboratory}
 }
 ```
-
-<!--The supervised model we used for representation learning was first introduced in this paper:
-
-Kraus OZ, Grys BT, Ba J, Chong Y, Frey BJ, Boone C, Andrews BJ. Automated analysis of high‐content microscopy data with deep learning. Molecular systems biology. 2017 Apr;13(4):924.
-
-```
-@article{kraus2017automated,
-  title={Automated analysis of high-content microscopy data with deep learning},
-  author={Kraus, Oren Z and Grys, Ben T and Ba, Jimmy and Chong, Yolanda and Frey, Brendan J and Boone, Charles and Andrews, Brenda J},
-  journal={Molecular systems biology},
-  volume={13},
-  number={4},
-  pages={924},
-  year={2017}
-}
-```
--->
