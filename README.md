@@ -4,6 +4,7 @@
 ![License](https://img.shields.io/github/license/arazd/pifia)
 
 In this work, we explored different methods for protein representation learning from microscopy data. We evaluated the extracted representations on four biological benchmarks - subcellular compartments, biological processes, pathways and protein complexes.
+<img src="https://github.com/arazd/pifia/blob/main/images/pifia_icon.png" alt="PIFiA" width="20"/>
 
 **Check out our [biorXiv preprint](https://www.biorxiv.org/content/10.1101/2023.02.24.529975v1)**!
 
@@ -27,7 +28,6 @@ We use 4 standards for comparison:
 * [KEGG Pathways](https://www.genome.jp/kegg/pathway.html)
 * [EMBL Protein Complexes](https://www.ebi.ac.uk/complexportal/home)
 
-<img src="https://github.com/arazd/protein_representation_learning/blob/main/methods_comparison.png" alt="drawing" width="250"/>
 
 
 ## Codebase
