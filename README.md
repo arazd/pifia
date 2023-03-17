@@ -3,9 +3,8 @@
 ![Top language](https://img.shields.io/github/languages/top/arazd/pifia)
 ![License](https://img.shields.io/github/license/arazd/pifia)
 
-In this work, we explored different methods for protein representation learning from microscopy data. We evaluated the extracted representations on four biological benchmarks - subcellular compartments, biological processes, pathways and protein complexes.
-
 <img align="right" src="https://github.com/arazd/pifia/blob/main/images/pifia_icon.png" alt="PIFiA" width="70"/>
+In this work, we explored different methods for protein representation learning from microscopy data. We evaluated the extracted representations on four biological benchmarks - subcellular compartments, biological processes, pathways and protein complexes.
 
 **Check out our [biorXiv preprint](https://www.biorxiv.org/content/10.1101/2023.02.24.529975v1)**!
 
