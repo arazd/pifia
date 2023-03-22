@@ -3,11 +3,11 @@
 ![Top language](https://img.shields.io/github/languages/top/arazd/pifia)
 ![License](https://img.shields.io/github/license/arazd/pifia)
 
-<img align="right" src="https://github.com/arazd/pifia/blob/main/images/pifia_icon.png" alt="PIFiA" width="85"/>
+<img align="right" src="https://github.com/arazd/pifia/blob/main/images/pifia_icon.png" alt="PIFiA" width="90"/>
 
 We present **PIFiA** (Protein Image-based Functional Annotation), a self-supervised approach for protein functional annotation from single-cell imaging data. We imaged the global yeast ORF-GFP collection and applied PIFiA to generate protein feature profiles from single-cell images of fluorescently tagged proteins. We show that PIFiA outperforms existing approaches for molecular representation learning and describe a range of downstream analysis tasks to explore the information content of the feature profiles.
 
-**Check out our [biorXiv preprint](https://www.biorxiv.org/content/10.1101/2023.02.24.529975v1)**!
+**Check out our [bioRxiv preprint](https://www.biorxiv.org/content/10.1101/2023.02.24.529975v1)**!
 
 ## About
 Despite major developments in molecular representation learning, **extracting functional information from biological images** remains a non-trivial
