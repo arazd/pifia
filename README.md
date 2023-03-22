@@ -34,10 +34,10 @@ We use 4 standards for comparison:
 ## Installation
 Configure environment:
 ```bash
-git clone https://github.com/arazd/soft_prompts
-cd soft_prompts
-conda env create -f environment.yaml
-conda activate nlp
+git clone https://github.com/arazd/pifia
+cd pifia
+conda env create -f environment.yml
+conda activate conda_env
 ```
 <!--
 pip install tensorflow-gpu=2.2.0
