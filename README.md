@@ -48,7 +48,13 @@ conda install cudnn==7.6.5
 pip install sklearn numpy Pillow argparse matplotlib
 -->
 ## Demo
-
+To run PIFiA demo on a toy dataset (5 proteins), follow the steps below:
+1. Unzip the dataset folder:
+```bash
+cd pifia
+unzip data_subset.zip
+```
+2.
 
 ## References 
 
