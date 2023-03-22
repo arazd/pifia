@@ -31,27 +31,23 @@ We use 4 standards for comparison:
 
 
 
-## Codebase
+## Installation
 Configure environment:
 ```bash
+git clone https://github.com/arazd/soft_prompts
+cd soft_prompts
+conda env create -f environment.yaml
+conda activate nlp
+```
+<!--
 pip install tensorflow-gpu=2.2.0
 
 conda install cudatoolkit==10.1.243
 conda install cudnn==7.6.5
 
 pip install sklearn numpy Pillow argparse matplotlib
-```
-
-Code for DeepLoc and Paired Cell Inpainting models is based on TensorFlow 2 and available under ```models/keras_models.py```. 
-
-To run train script, use:
-```python train.py --backbone deep_loc --learning_rate 0.001 --num_epoch 5 --checkpoint_dir save_ckpt```
-
-Check other ```train.py``` arguments for different training options.
-
-CellProfiler features were obtained by running the [CellProfiler pipeline](https://cellprofiler.org/). 
-
-Dataloader class is available under ```models/dataset_utils.py```, and contains reading / preprocessing / converting to tensorflow Dataset single-cell images in .tiff format. Link to server with cell image data is [above](#server).
+-->
+## Demo
 
 
 ## References 
