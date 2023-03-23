@@ -119,13 +119,14 @@ Loading weights for PIFiA model is very straightforward. Final pre-trained weigh
 
 **B.1 Load a pre-trained PIFiA model**
 
-We show how to load pre-trained PIFiA weights (that are used in paper). First, activate your conda environment and go to ```model``` folder.
+<!-- We show how to load pre-trained PIFiA weights (that are used in paper).  -->
+First, activate your conda environment and go to ```model``` folder.
 ```bash
 source activate conda_env
 cd model
 ```
 
-To load pre-trained PIFiA model in Python, run the following code:
+To load pre-trained PIFiA weights in Python, run the following code:
 ```python
 model = models.pifia_network(num_classes,
                              k=1,
@@ -134,7 +135,7 @@ model = models.pifia_network(num_classes,
                              last_block=True)
 model.load_weights('pifia_weights_i0')
 ```
-Note that if you want to load your model (from training in step A), you need to change the weights path.
+Note that if you want to load custom PIFiA weights (from training in step A), you need to change the weights path.
 
 **B2. Extract single-cell features**
 
