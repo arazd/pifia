@@ -84,7 +84,7 @@ First, unzip the toy dataset folder:
 cd pifia
 unzip data/data_subset.zip
 ```
-### A, Training PIFiA
+### A. Training PIFiA
 **A.1 Create folders for checkpointing / saving model weights**:
 ```bash
 mkdir ckpt_dir
