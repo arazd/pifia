@@ -32,13 +32,19 @@ We use 4 standards for comparison:
 
 
 ## Installation
-Configure environment:
+Make sure that you have Anaconda installed. If not - follow this [miniconda installation](https://docs.conda.io/en/latest/miniconda.html).
+
+To run PIFiA code on GPU, make sure that you have a CUDA capable GPU and the [drivers](https://www.nvidia.com/download/index.aspx?lang=en-us) for your GPU are up to date. In our implementation, we used and CUDA 11.0.
+
+Now you can configure conda environment:
 ```bash
 git clone https://github.com/arazd/pifia
 cd pifia
 conda env create -f environment.yml
 conda activate conda_env
 ```
+Your conda should start downloading and extracting packages. This can take ~15-20 minutes.
+
 <!--
 pip install tensorflow-gpu=2.2.0
 
@@ -80,6 +86,8 @@ OR, if you are using slurm, run:
 ```bash
 sbatch scipts/train_pifia.sh
 ```
+
+After training is completed, you can see training log and saved weights in ```saved_weights``` folder we created.
 
 ### Loading pre-trained PIFiA model and feature extraction
 4. To load a pre-trained PIFiA model, you can:
