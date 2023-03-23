@@ -118,6 +118,7 @@ After training is completed, you can see training log and saved weights in ```sa
 Loading weights for PIFiA model is very straightforward. Final pre-trained weights of PIFiA network (that we used in our work) are stored under ```model/pretrained_weights```. Alternatively, if you are training PIFiA newotk from scratch (as shown in step A), your weights with epoch number should be saved in ```saved_weights``` folder.
 
 **B.1 To load a pre-trained PIFiA model:**
+
 We show how to load pre-trained PIFiA weights (that are used in paper). First, activate your conda environment and go to ```model``` folder.
 ```bash
 source activate conda_env
@@ -136,6 +137,7 @@ model.load_weights('pifia_weights_i0')
 Note that if you want to load your model (from training in step A), you need to change the weights path.
 
 **B2. To extract single-cell features**
+
 After loading the model, here is how you can extract features from *NUP2* protein from our toy dataset:
 ```python
 labels_dict = np.load('data/protein_to_files_dict_toy_dataset.npy',allow_pickle=True)[()]
