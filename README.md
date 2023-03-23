@@ -2,7 +2,7 @@
 
 ![Top language](https://img.shields.io/github/languages/top/arazd/pifia)
 ![License](https://img.shields.io/github/license/arazd/pifia)
-[![Generic badge](https://img.shields.io/badge/DOI-10.1101/2023.02.24.529975-ORANGE.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/DOI-10.1101/2023.02.24.529975-ORANGE.svg)](https://doi.org/10.1101/2023.02.24.529975)
 <!-- [![DOI](https://zenodo.org/badge/DOI/10.1101/zenodo.6762584.svg)](https://doi.org/10.1101/2023.02.24.529975) -->
 
 <img align="right" src="https://github.com/arazd/pifia/blob/main/images/pifia_icon.png" alt="PIFiA" width="90"/>
@@ -36,7 +36,7 @@ We use 4 standards for comparison:
 ## Installation
 
 ### System requirements
-Linux, Mac OS, Windows are supported for running the code on CPU; We recommend Linux for running experiments with GPU. At least 16GB of RAM is required to run the software.
+Linux, Mac OS, Windows are supported for running the code on CPU; We recommend Linux for running experiments with GPU. At least 16GB of RAM is required to run the software. The codebase has been heavily tested on Linux 4.15.0-206-generic #217-Ubuntu.
 
 ### Dependencies
 Our implementation is based on Python 3 and TensorFlow 2.1. 
