@@ -52,7 +52,9 @@ To run PIFiA demo on a toy dataset (5 proteins), follow the steps below:
 1. Unzip the dataset folder:
 ```bash
 cd pifia
-unzip data_subset.zip
+unzip data/data_subset.zip
+mkdir ckpt_dir
+mkdir saved_weights
 ```
 2.
 
