@@ -67,6 +67,9 @@ Checkpointing is implemented for training on high-performance computing faciliti
 
 3. Run training script:
 ```bash
+export HDD_MODELS_DIR=./ 
+source activate conda_env
+
 python model/train.py --dataset harsha  \
     --backbone pifia_network --learning_rate 0.0003 --dropout_rate 0.02 --cosine_decay True \
     --labels_type toy_dataset --dense1_size 128 --num_features 64 --save_prefix TEST_RUN
