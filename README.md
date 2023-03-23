@@ -48,7 +48,9 @@ conda install cudnn==7.6.5
 pip install sklearn numpy Pillow argparse matplotlib
 -->
 ## Demo
-To run PIFiA demo on a toy dataset (5 proteins), first unzip the toy dataset folder:
+Here we show how to run PIFiA demo on a toy dataset (5 proteins).
+
+1. First, unzip the toy dataset folder:
 ```bash
 cd pifia
 unzip data/data_subset.zip
@@ -63,10 +65,23 @@ Since our full dataset contrains >3 million single-cell images, it is expensive 
 
 Checkpointing is implemented for training on high-performance computing facilities that require job preemption.
 
+3. Run training script:
+```bash
+python model/train.py --dataset harsha  \
+    --backbone pifia_network --learning_rate 0.0003 --dropout_rate 0.02 --cosine_decay True \
+    --labels_type toy_dataset --dense1_size 128 --num_features 64 --save_prefix TEST_RUN
+    --num_epoch 30  --checkpoint_interval 1800 --checkpoint_dir ./ckpt_dir --log_file /log_file.log
+```
+
+OR, if you are using slurm, run:
+```bash
+sbatch scipts/train_pifia.sh
+```
+
 ### Loading pre-trained PIFiA model and feature extraction
+4. To load a pre-trained PIFiA model, you can:
 
-
-3. 
+5. To extract single-cell features, you can:
 
 ## References 
 
