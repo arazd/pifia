@@ -115,7 +115,7 @@ sbatch scipts/train_pifia.sh
 After training is completed, you can see training log and saved weights in ```saved_weights``` folder we created.
 
 ### B. Loading pre-trained PIFiA model and feature extraction
-Loading weights for PIFiA model is very straightforward. Final pre-trained weights of PIFiA network (that we used in our work) are stored under ```model/pretrained_weights```. Alternatively, if you are training PIFiA newotk from scratch (as shown in step A), your weights with epoch number should be saved in ```saved_weights``` folder.
+Loading weights for PIFiA model is very straightforward. Final pre-trained weights of PIFiA network (that we used in our paper) are stored under ```model/pretrained_weights```. Alternatively, if you are training PIFiA network from scratch (as shown in step A), your weights with epoch number should be saved in ```saved_weights``` folder.
 
 **B.1 To load a pre-trained PIFiA model:**
 
