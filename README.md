@@ -128,6 +128,10 @@ cd model
 
 To load pre-trained PIFiA weights in Python, run the following code:
 ```python
+# we need to know number of proteins in our training data to get number of nodes for PIFiA classification layer
+labels_dict = np.load('data/protein_to_files_dict_toy_dataset.npy',allow_pickle=True)[()]
+num_classes = len(list(labels_dict))
+
 model = models.pifia_network(num_classes,
                              k=1,
                              num_features=64,
@@ -139,11 +143,8 @@ Note that if you want to load custom PIFiA weights (from training in step A), yo
 
 **B2. Extract single-cell features**
 
-After loading the model, here is how you can extract features from *NUP2* protein from our toy dataset:
+After loading the model, here is an example of extracting features from *NUP2* protein from our toy dataset:
 ```python
-labels_dict = np.load('data/protein_to_files_dict_toy_dataset.npy',allow_pickle=True)[()]
-num_classes = len(list(labels_dict))
-
 protein_features, protein_images = get_features_from_protein('NUP2', labels_dict, model, 
                                                              average=False, subset='test')
 ```
