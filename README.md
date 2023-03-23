@@ -148,6 +148,7 @@ After loading the model, here is an example of extracting features from *NUP2* p
 protein_features, protein_images = get_features_from_protein('NUP2', labels_dict, model, 
                                                              average=False, subset='test')
 ```
+In this example, ```protein_features``` is a numpy array of size ```(10, 64)```, i.e. it contains ten 64-dimensional single-cell feature profiles.
 
 ## Cite this work
 
