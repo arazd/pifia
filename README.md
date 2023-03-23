@@ -149,7 +149,7 @@ protein_name = 'NUP2'
 protein_features, protein_images = get_features_from_protein(protein_name, labels_dict, model, 
                                                              average=False, subset='test')
 ```
-In this example, ```protein_features``` is a numpy array of size ```(10, 64)```, i.e. it contains ten 64-dimensional single-cell feature profiles. The extraction process should take ~2sec on GPU and ~30sec on CPU.
+In this example, ```protein_features``` is a numpy array of size ```(10, 64)```, i.e. it contains ten 64-dimensional single-cell feature profiles. The extraction process should take ~1sec on GPU and ~20sec on CPU.
 
 ## Cite this work
 
