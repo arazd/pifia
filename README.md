@@ -137,7 +137,7 @@ model = models.pifia_network(num_classes,
                              num_features=64,
                              dense1_size=128,
                              last_block=True)
-model.load_weights('pifia_weights_i0')
+model.load_weights('pretrained_weights/pifia_weights_i0')
 ```
 Note that if you want to load custom PIFiA weights (from training in step A), you need to change the weights path.
 
