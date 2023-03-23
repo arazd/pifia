@@ -145,7 +145,8 @@ Note that if you want to load custom PIFiA weights (from training in step A), yo
 
 After loading the model, here is an example of extracting features from *NUP2* protein from our toy dataset:
 ```python
-protein_features, protein_images = get_features_from_protein('NUP2', labels_dict, model, 
+protein_name = 'NUP2'
+protein_features, protein_images = get_features_from_protein(protein_name, labels_dict, model, 
                                                              average=False, subset='test')
 ```
 In this example, ```protein_features``` is a numpy array of size ```(10, 64)```, i.e. it contains ten 64-dimensional single-cell feature profiles.
