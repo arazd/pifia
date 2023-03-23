@@ -2,6 +2,8 @@
 
 ![Top language](https://img.shields.io/github/languages/top/arazd/pifia)
 ![License](https://img.shields.io/github/license/arazd/pifia)
+[![Generic badge](https://img.shields.io/badge/DOI-<10.1101/2023.02.24.529975>-<COLOR>.svg)](https://shields.io/)
+<!-- [![DOI](https://zenodo.org/badge/DOI/10.1101/zenodo.6762584.svg)](https://doi.org/10.1101/2023.02.24.529975) -->
 
 <img align="right" src="https://github.com/arazd/pifia/blob/main/images/pifia_icon.png" alt="PIFiA" width="90"/>
 
