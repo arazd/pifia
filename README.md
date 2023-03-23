@@ -34,6 +34,24 @@ We use 4 standards for comparison:
 
 
 ## Installation
+
+### System requirements
+
+
+### Dependencies
+Our implementation is based on Python 3 and TensorFlow 2.2. 
+
+Requirements:
+* python 3.7
+* tensorflow 2.1
+* pandas 0.25.1
+* numpy 1.18.1
+* matplotlib 3.0.3
+* seaborn 0.11.1
+* pillow 6.1.0
+* plotly 4.14.3
+
+### Instructions
 Make sure that you have Anaconda installed. If not - follow this [miniconda installation](https://docs.conda.io/en/latest/miniconda.html).
 
 To run PIFiA code on GPU, make sure that you have a CUDA capable GPU and the [drivers](https://www.nvidia.com/download/index.aspx?lang=en-us) for your GPU are up to date. In our implementation, we used and CUDA 11.0.
