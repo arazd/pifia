@@ -139,7 +139,7 @@ model = models.pifia_network(num_classes,
                              last_block=True)
 model.load_weights('pretrained_weights/pifia_weights_i0')
 ```
-Note that if you want to load custom PIFiA weights (from training in step A), you need to change the weights path.
+Note that if you want to load custom PIFiA weights (from training in step A), you need to change the weights path. Loading the model should take ~1min.
 
 **B2. Extract single-cell features**
 
@@ -149,7 +149,7 @@ protein_name = 'NUP2'
 protein_features, protein_images = get_features_from_protein(protein_name, labels_dict, model, 
                                                              average=False, subset='test')
 ```
-In this example, ```protein_features``` is a numpy array of size ```(10, 64)```, i.e. it contains ten 64-dimensional single-cell feature profiles.
+In this example, ```protein_features``` is a numpy array of size ```(10, 64)```, i.e. it contains ten 64-dimensional single-cell feature profiles. The extraction process should take <1min.
 
 ## Cite this work
 
