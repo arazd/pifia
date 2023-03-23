@@ -7,15 +7,17 @@
 
 <img align="right" src="https://github.com/arazd/pifia/blob/main/images/pifia_icon.png" alt="PIFiA" width="90"/>
 
-We present **PIFiA** (Protein Image-based Functional Annotation), a self-supervised approach for protein functional annotation from single-cell imaging data. We imaged the global yeast ORF-GFP collection and applied PIFiA to generate protein feature profiles from single-cell images of fluorescently tagged proteins. We show that PIFiA outperforms existing approaches for molecular representation learning and describe a range of downstream analysis tasks to explore the information content of the feature profiles.
+We present **PIFiA** (Protein Image-based Functional Annotation), a self-supervised approach for protein functional annotation from single-cell imaging data. 
 
 **Check out our [bioRxiv preprint](https://www.biorxiv.org/content/10.1101/2023.02.24.529975v1)**!
 
 ## About
-Despite major developments in molecular representation learning, **extracting functional information from biological images** remains a non-trivial
-computational task. In this work, we revisit deep learning models used for *classifying major subcellular localizations*, and evaluate
-*representations extracted from their final layers*. We show that **simple convolutional networks trained on localization classification can learn protein representations that encapsulate diverse functional information**, and significantly outperform currently used autoencoder-based models. 
+We imaged the global yeast ORF-GFP collection and applied PIFiA to generate protein feature profiles from single-cell images of fluorescently tagged proteins. We show that PIFiA outperforms existing approaches for molecular representation learning and describe a range of downstream analysis tasks to explore the information content of the feature profiles.
 
+<!-- Despite major developments in molecular representation learning, **extracting functional information from biological images** remains a non-trivial
+computational task. In this work, we revisit deep learning models used for *classifying major subcellular localizations*, and evaluate
+*representations extracted from their final layers*. We show that **simple convolutional networks trained on localization classification can learn protein representations that encapsulate diverse functional information**, and significantly outperform currently used autoencoder-based models.  -->
+<!-- 
 ## Methods & Results
 We compare three methods for molecular representation learning:
 
@@ -30,7 +32,7 @@ We use 4 standards for comparison:
 * [GO Biological Process)](http://geneontology.org/) (GO BP)
 * [KEGG Pathways](https://www.genome.jp/kegg/pathway.html)
 * [EMBL Protein Complexes](https://www.ebi.ac.uk/complexportal/home)
-
+ -->
 
 
 ## Installation
