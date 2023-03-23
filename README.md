@@ -151,6 +151,11 @@ protein_features, protein_images = get_features_from_protein(protein_name, label
 ```
 In this example, ```protein_features``` is a numpy array of size ```(10, 64)```, i.e. it contains ten 64-dimensional single-cell feature profiles. The extraction process should take ~1sec on GPU and ~20sec on CPU.
 
+## Reproducing results
+To reporoduce our results, please check out folder ```pifia_results```. 
+
+To interactively look at PIFiA average feature profiles, or aFPs (Fig. 3 in the paper), download file ```PIFiA_aFPs_tSNE.html``` and open it in your web browser.
+
 ## Cite this work
 
 If you found this work useful for your research, please cite:
