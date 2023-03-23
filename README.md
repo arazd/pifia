@@ -41,10 +41,13 @@ Now you can configure conda environment:
 git clone https://github.com/arazd/pifia
 cd pifia
 conda env create -f environment.yml
-conda activate conda_env
 ```
 Your conda should start downloading and extracting packages. This can take ~15-20 minutes.
 
+To activate the environment, run:
+```bash
+conda activate conda_env
+```
 <!--
 pip install tensorflow-gpu=2.2.0
 
