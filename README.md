@@ -154,7 +154,7 @@ In this example, ```protein_features``` is a numpy array of size ```(10, 64)```,
 ## Reproducing results
 To reproduce results from the paper, please check out folder ```pifia_results```. 
 
-To interactively look at PIFiA average feature profiles, or aFPs (Fig. 3 in the paper), download file ```PIFiA_aFPs_tSNE.html``` and open it in your web browser. You should be able to see a whole-proteome tSNE with protein names and their annations (localization, GO bioprocess, GO molecular function, pathways, protein complexes).
+To interactively look at PIFiA average feature profiles, or aFPs (Fig. 3 in the paper), download file ```PIFiA_aFPs_tSNE.html``` and open it in your web browser. You should be able to see a whole-proteome tSNE with protein names and their annotations (subcellular localization, GO bioprocess, GO molecular function, pathway, protein complex).
 
 ## Cite this work
 
