@@ -36,10 +36,10 @@ We use 4 standards for comparison:
 ## Installation
 
 ### System requirements
-
+Linux, Mac OS, Windows are supported for running the code on CPU; We recommend Linux for running experiments with GPU. At least 16GB of RAM is required to run the software.
 
 ### Dependencies
-Our implementation is based on Python 3 and TensorFlow 2.2. 
+Our implementation is based on Python 3 and TensorFlow 2.1. 
 
 Requirements:
 * python 3.7
