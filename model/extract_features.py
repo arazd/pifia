@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-import models, dataset_utils 
+from model import dataset_utils
 
 def create_dataset_for_protein(protein, labels_dict, subset):
     fnames_gfp_val = labels_dict[protein][subset]

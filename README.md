@@ -60,15 +60,15 @@ To run PIFiA code on GPU, make sure that you have a CUDA capable GPU and the [dr
 
 Now you can configure conda environment:
 ```bash
-git clone https://github.com/arazd/pifia
-cd pifia
-conda env create -f environment.yml
+$ git clone https://github.com/arazd/pifia
+$ cd pifia
+$ conda env create -f environment.yml
 ```
 Your conda should start downloading and extracting packages. This can take ~15-20 minutes.
 
 To activate the environment, run:
 ```bash
-conda activate conda_env
+$ conda activate pifia_env
 ```
 <!--
 pip install tensorflow-gpu=2.2.0
@@ -83,14 +83,15 @@ Here we show how to run PIFiA demo on a toy dataset (5 proteins).
 
 First, unzip the toy dataset folder:
 ```bash
-cd pifia
-unzip data/data_subset.zip
+$ cd pifia/data
+$ unzip data_subset.zip
 ```
 ### A. Training PIFiA
 **A.1 Create folders for checkpointing / saving model weights**:
 ```bash
-mkdir ckpt_dir
-mkdir saved_weights
+$ cd ../ # go back to pifia main folder
+$ mkdir ckpt_dir
+$ mkdir saved_weights
 ```
 Since our full dataset contrains >3 million single-cell images, it is expensive to run feature extraction during training. Hence, we save model weights several times during training, then perform feature extraction and evaluation, and finally select the best weights.
 
@@ -98,10 +99,10 @@ Checkpointing is implemented for training on high-performance computing faciliti
 
 **A.2 Run training script**:
 ```bash
-export HDD_MODELS_DIR=./ 
-source activate conda_env
+$ export HDD_MODELS_DIR=./ 
+$ source activate pifia_env
 
-python model/train.py --dataset harsha  \
+$ python model/train.py --dataset harsha  \
     --backbone pifia_network --learning_rate 0.0003 --dropout_rate 0.02 --cosine_decay True \
     --labels_type toy_dataset --dense1_size 128 --num_features 64 --save_prefix TEST_RUN
     --num_epoch 30  --checkpoint_interval 1800 --checkpoint_dir ./ckpt_dir --log_file /log_file.log
@@ -109,7 +110,7 @@ python model/train.py --dataset harsha  \
 
 OR, if you are using slurm, run:
 ```bash
-sbatch scipts/train_pifia.sh
+$ sbatch scipts/train_pifia.sh
 ```
 
 After training is completed, you can see training log and saved weights in ```saved_weights``` folder we created.
@@ -122,22 +123,27 @@ Loading weights for PIFiA model is very straightforward. Final pre-trained weigh
 <!-- We show how to load pre-trained PIFiA weights (that are used in paper).  -->
 First, activate your conda environment and go to ```model``` folder.
 ```bash
-source activate conda_env
-cd model
+$ source activate pifia_env
+$ cd model
 ```
 
 To load pre-trained PIFiA weights in Python, run the following code:
 ```python
-# we need to know number of proteins in our training data to get number of nodes for PIFiA classification layer
-labels_dict = np.load('data/protein_to_files_dict_toy_dataset.npy',allow_pickle=True)[()]
-num_classes = len(list(labels_dict))
+# import 
+>>> import numpy as np
+>>> from model import models
+>>> from model.extract_features import *
 
-model = models.pifia_network(num_classes,
+# we need to know number of proteins in our training data to get number of nodes for PIFiA classification layer
+>>> labels_dict = np.load('data/protein_to_files_dict_toy_dataset.npy',allow_pickle=True)[()]
+>>> num_classes = 4049
+
+>>> model = models.pifia_network(num_classes,
                              k=1,
                              num_features=64,
                              dense1_size=128,
                              last_block=True)
-model.load_weights('pretrained_weights/pifia_weights_i0')
+>>> model.load_weights('model/pretrained_weights/pifia_weights_i0')
 ```
 Note that if you want to load custom PIFiA weights (from training in step A), you need to change the weights path. Loading the model should take ~1min.
 
@@ -145,8 +151,8 @@ Note that if you want to load custom PIFiA weights (from training in step A), yo
 
 After loading the model, here is an example of extracting features from *NUP2* protein from our toy dataset:
 ```python
-protein_name = 'NUP2'
-protein_features, protein_images = get_features_from_protein(protein_name, labels_dict, model, 
+>>> protein_name = 'NUP2'
+>>> protein_features, protein_images = get_features_from_protein(protein_name, labels_dict, model, 
                                                              average=False, subset='test')
 ```
 In this example, ```protein_features``` is a numpy array of size ```(10, 64)```, i.e. it contains ten 64-dimensional single-cell feature profiles. The extraction process should take ~1sec on GPU and ~20sec on CPU.

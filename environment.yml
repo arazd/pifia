@@ -1,4 +1,4 @@
-name: conda_env
+name: pifia_env
 channels:
   - pytorch
   - anaconda
