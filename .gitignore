@@ -2,3 +2,5 @@
 *MACOSX*
 *pycache*
 *data_subset*
+log_file.log
+harsha_dense128_features64toy_dataset_dropout_0.02_pifia_networkTEST_RUN_batch_128_lr0.0003_cos_decay_width1.0/*

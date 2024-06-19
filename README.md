@@ -89,7 +89,7 @@ $ unzip data_subset.zip
 ### A. Training PIFiA
 **A.1 Create folders for checkpointing / saving model weights**:
 ```bash
-$ cd ../ # go back to pifia main folder
+$ cd ../
 $ mkdir ckpt_dir
 $ mkdir saved_weights
 ```
@@ -100,12 +100,12 @@ Checkpointing is implemented for training on high-performance computing faciliti
 **A.2 Run training script**:
 ```bash
 $ export HDD_MODELS_DIR=./ 
-$ source activate pifia_env
+$ conda activate pifia_env
 
-$ python model/train.py --dataset harsha  \
+$ python model/train.py --dataset harsha \
     --backbone pifia_network --learning_rate 0.0003 --dropout_rate 0.02 --cosine_decay True \
-    --labels_type toy_dataset --dense1_size 128 --num_features 64 --save_prefix TEST_RUN
-    --num_epoch 30  --checkpoint_interval 1800 --checkpoint_dir ./ckpt_dir --log_file /log_file.log
+    --labels_type toy_dataset --dense1_size 128 --num_features 64 --save_prefix TEST_RUN \
+    --num_epoch 30  --checkpoint_interval 1800 --checkpoint_dir ./ckpt_dir --log_file ./log_file.log
 ```
 
 OR, if you are using slurm, run:
@@ -123,13 +123,13 @@ Loading weights for PIFiA model is very straightforward. Final pre-trained weigh
 <!-- We show how to load pre-trained PIFiA weights (that are used in paper).  -->
 First, activate your conda environment and go to ```model``` folder.
 ```bash
-$ source activate pifia_env
+$ conda activate pifia_env
 $ cd model
 ```
 
 To load pre-trained PIFiA weights in Python, run the following code:
 ```python
-# import 
+# import packages
 >>> import numpy as np
 >>> from model import models
 >>> from model.extract_features import *
