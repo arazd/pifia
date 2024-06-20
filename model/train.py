@@ -10,7 +10,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-HDD_MODELS_DIR = os.environ['HDD_MODELS_DIR']
+# HDD_MODELS_DIR = os.environ['HDD_MODELS_DIR']
 
 # create datasets
 def create_dataset(batch_size, dataset_name, labels_type, \
@@ -97,7 +97,7 @@ def get_folder_name(args):
 def create_weights_folder(args):
     save_name = get_folder_name(args)
     # create a folder on HDD where weights are saved
-    save_weights_dir = os.path.join(HDD_MODELS_DIR, save_name)
+    save_weights_dir = os.path.join(args.saved_weights_dir, save_name)
     if os.path.exists(save_weights_dir)==False:
         os.mkdir(save_weights_dir)
 
@@ -111,7 +111,7 @@ def create_weights_folder(args):
 def create_logfile_symlink(args):
     # create symlink to train.log on HDD folder
     save_name = get_folder_name(args)
-    dst = os.path.join(HDD_MODELS_DIR, save_name, 'train.log')
+    dst = os.path.join(args.saved_weights_dir, 'train.log')
     if os.path.islink(dst)==False:
          os.symlink(args.log_file, dst)
 
@@ -405,6 +405,13 @@ if __name__ == "__main__":
         '--checkpoint_dir',
         type=str,
         help='path to save and look for the checkpoint file',
+        default=None
+    )
+
+    parser.add_argument(
+        '--saved_weights_dir',
+        type=str,
+        help='path to save the trained weights',
         default=None
     )
 
