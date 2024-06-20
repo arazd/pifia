@@ -105,7 +105,8 @@ $ conda activate pifia_env
 $ python model/train.py --dataset harsha \
     --backbone pifia_network --learning_rate 0.0003 --dropout_rate 0.02 --cosine_decay True \
     --labels_type toy_dataset --dense1_size 128 --num_features 64 --save_prefix TEST_RUN \
-    --num_epoch 30  --checkpoint_interval 1800 --checkpoint_dir ./ckpt_dir --log_file ./log_file.log
+    --num_epoch 30  --checkpoint_interval 1800 --checkpoint_dir ./ckpt_dir \ 
+    --saved_weights_dir ./saved_weights --log_file ./log_file.log
 ```
 
 OR, if you are using slurm, run:
@@ -124,10 +125,10 @@ Loading weights for PIFiA model is very straightforward. Final pre-trained weigh
 First, activate your conda environment and go to ```model``` folder.
 ```bash
 $ conda activate pifia_env
-$ cd model
+$ python
 ```
 
-To load pre-trained PIFiA weights in Python, run the following code:
+To load pre-trained PIFiA weights in Python, run the following code in the python shell:
 ```python
 # import packages
 >>> import numpy as np
